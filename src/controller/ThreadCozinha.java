@@ -49,12 +49,12 @@ public class ThreadCozinha extends Thread {
 		while (resto < tempo) {
 			try {
 				sleep(100);
-				percentual = ((resto / tempo) * 100);
+				percentual = (resto / tempo * 100);
 			} catch (InterruptedException e) {
 				e.printStackTrace();
 			}
 			System.out.println("O prato n° " + id + " está " + percentual + "% cozido");
-			resto += 100;
+			resto = resto + 100;
 		}
 		System.out.println("O prato nº " + id + " está pronto, indo para entrega");
 	}
